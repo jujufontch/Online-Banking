@@ -48,6 +48,8 @@ public class sql {
         result = sentence.executeQuery(satz);}
     catch(Exception e){
 
+          System.out.println("Fehler in der SQL.Resultmethode");
+
     }
 
 
@@ -87,7 +89,7 @@ public class sql {
 
         catch (Exception e){
 
-            System.out.println("Error in Insertion of the table\n\n");
+            System.out.println("Error in Insertion of the table in the sql.BenutzerCon method\n\n");
         }
     }
 
@@ -97,7 +99,7 @@ try{
       columns = r.getMetaData().getColumnCount();}
 
 catch(Exception e){
-    System.out.println("Error");
+    System.out.println("Error in the sql.getResultColumn method");
      }
 
 return columns;
@@ -121,7 +123,7 @@ return columns;
             sentence.execute(satz);
             result = sentence.executeQuery(satz);}
         catch(Exception e){
-
+  System.out.println("Errot in the sql.Operation method");
         }
 
 
@@ -154,7 +156,10 @@ return columns;
 
 
         }
-        catch(Exception e){}
+        catch(Exception e){
+
+              System.out.println("Error int sql.Select method");
+        }
 
 
     }
@@ -197,7 +202,7 @@ return columns;
             System.out.println("Operation successful!\n\n");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error in insertion of the table\n\n");
+            System.out.println("Error in insertion of the table in the sql.deposit method\n\n");
         }
     }
 
@@ -239,7 +244,7 @@ return columns;
             System.out.println("Operation successful!\n\n");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error in insertion of the table\n\n");
+            System.out.println("Error in insertion of the table in the sql.withdraw method\n\n");
         }
     }
 
